@@ -1,0 +1,127 @@
+﻿<Window x:Class="HandyControlTest_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HandyControlTest_WPF"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <TextBlock Text="Badge"/>
+            <hc:Badge Value="500"  Height="30" HorizontalAlignment="Center" Background="Orange">
+                <Button Content="Default style"/>
+            </hc:Badge>
+            <hc:Badge Text="New"  Height="30" HorizontalAlignment="Center" Background="GreenYellow">
+                <Button Content="Default style"/>
+            </hc:Badge>
+            <TextBlock Text="CoverView"/>
+            <hc:CoverView ItemContentHeightFixed="True" ItemContentHeight="120" ItemHeight="80" ItemWidth="80" ItemMargin="10,10">
+                <hc:CoverViewItem >
+                    <hc:CoverViewItem.Header>
+                        <Image Source="\Images\01.jpg" Height="80" Width="80" Stretch="UniformToFill"/>
+                    </hc:CoverViewItem.Header>
+                    <Border Margin="10" Background="Yellow">
+                        <TextBlock Text="This is the content 1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                    </Border>
+                </hc:CoverViewItem>
+                <hc:CoverViewItem  HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <hc:CoverViewItem.Header>
+                        <Image Source="\Images\02.jpg" Height="80" Width="80" Stretch="UniformToFill"/>
+                    </hc:CoverViewItem.Header>
+                    <Border Margin="10" Background="Yellow">
+                        <TextBlock Text="This is the content 2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                    </Border>
+                </hc:CoverViewItem>
+                <hc:CoverViewItem >
+                    <hc:CoverViewItem.Header>
+                        <Image Source="\Images\03.jpg" Height="80" Width="80" Stretch="UniformToFill"/>
+                    </hc:CoverViewItem.Header>
+                    <Border Margin="10" Background="Yellow">
+                        <TextBlock Text="This is the content 3" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                    </Border>
+                </hc:CoverViewItem>
+                <hc:CoverViewItem  HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <hc:CoverViewItem.Header>
+                        <Image Source="\Images\04.jpg" Height="80" Width="80" Stretch="UniformToFill"/>
+                    </hc:CoverViewItem.Header>
+                    <Border Margin="10" Background="Yellow">
+                        <TextBlock Text="This is the content 4" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                    </Border>
+                </hc:CoverViewItem>
+                <hc:CoverViewItem >
+                    <hc:CoverViewItem.Header>
+                        <Image Source="\Images\01.jpg" Height="80" Width="80" Stretch="UniformToFill"/>
+                    </hc:CoverViewItem.Header>
+                    <Border Margin="10" Background="Yellow">
+                        <TextBlock Text="This is the content 5" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                    </Border>
+                </hc:CoverViewItem>
+                <hc:CoverViewItem  HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <hc:CoverViewItem.Header>
+                        <Image Source="\Images\02.jpg" Height="80" Width="80" Stretch="UniformToFill"/>
+                    </hc:CoverViewItem.Header>
+                    <Border Margin="10" Background="Yellow">
+                        <TextBlock Text="This is the content 6" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                    </Border>
+                </hc:CoverViewItem>
+                <hc:CoverViewItem >
+                    <hc:CoverViewItem.Header>
+                        <Image Source="\Images\03.jpg" Height="80" Width="80" Stretch="UniformToFill"/>
+                    </hc:CoverViewItem.Header>
+                    <Border Margin="10" Background="Yellow">
+                        <TextBlock Text="This is the content 7" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                    </Border>
+                </hc:CoverViewItem>
+                <hc:CoverViewItem  HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <hc:CoverViewItem.Header>
+                        <Image Source="\Images\04.jpg" Height="80" Width="80" Stretch="UniformToFill"/>
+                    </hc:CoverViewItem.Header>
+                    <Border Margin="10" Background="Yellow">
+                        <TextBlock Text="This is the content 8" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                    </Border>
+                </hc:CoverViewItem>
+            </hc:CoverView>
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" x:Name="right_column">
+            
+            <TextBlock Text="Carousel"/>
+            <hc:Carousel IsCenter="True" AutoRun="True" Height="200">
+                <!--只有内容的宽度正好等于页面的宽度才能左右切换，否则只是平移效果-->
+                <hc:SimplePanel Width="400">
+                    <Image Width="400" Stretch="UniformToFill" Source="\Images\01.jpg"/>
+                    <TextBlock Text="1" FontSize="64" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </hc:SimplePanel>
+                <hc:SimplePanel Width="400">
+                    <Image Width="400" Stretch="UniformToFill" Source="\Images\02.jpg"/>
+                    <TextBlock Text="2" FontSize="64" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </hc:SimplePanel>
+                <hc:SimplePanel Width="400">
+                    <Image Width="400" Stretch="UniformToFill" Source="\Images\03.jpg"/>
+                    <TextBlock Text="3" FontSize="64" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </hc:SimplePanel>
+                <hc:SimplePanel Width="400">
+                    <Image Width="400" Stretch="UniformToFill" Source="\Images\04.jpg"/>
+                    <TextBlock Text="4" FontSize="64" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </hc:SimplePanel>
+            </hc:Carousel>
+            
+            
+            <TextBlock Text="Growl Information notification"/>
+            <Button x:Name="Button_Growl" Content="Show Growl Notification" Click="Button_Growl_Click"/>
+            <Button x:Name="Button_GrowlGlobal" Content="Show Growl Notification Global" Click="Button_GrowlGlobal_Click"/>
+            <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Right">
+                <StackPanel hc:Growl.GrowlParent="True" VerticalAlignment="Top" Margin="0,10,10,10"/>
+            </ScrollViewer>
+            
+        </StackPanel>
+    </Grid>
+</Window>
